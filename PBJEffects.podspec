@@ -18,8 +18,8 @@ s.source           = { :git => 'https://github.com/SnugJoker/PBJEffects.git', :t
 
 s.ios.deployment_target = '8.0'
 
-s.source_files = 'PBJEffects/Classes/PBJEffects/*'
-s.public_header_files = 'PBJEffects/Classes/PBJEffects/*.h'
+s.source_files = 'PBJEffects/Classes/*'
+s.public_header_files = 'PBJEffects/Classes/*.h'
 
 
 end
