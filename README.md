@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/PBJEffects.svg?style=flat)](http://cocoapods.org/pods/PBJEffects)
 
 ## Description
-PBJAnimations is a nice collection of cool animations & transitions.
+PBJEffects is a nice collection of cool effects.
 
 ## Requirements
 No requirements needed.
