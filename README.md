@@ -8,6 +8,9 @@
 ## Description
 PBJEffects is a nice collection of cool effects.
 
+## Example
+![Screenshot](Screenies/screenshot.png)
+
 ## Requirements
 No requirements needed.
 
