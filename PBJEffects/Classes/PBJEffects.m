@@ -101,11 +101,11 @@
         UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
         //always fill the view
-        blurEffectView.frame = self.view.bounds;
+        blurEffectView.frame = view.bounds;
         blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
-        [self.view insertSubview:blurEffectView aboveSubview:view];
-    
+        [view insertSubview:blurEffectView aboveSubview:view];
+        
     }else {
         
         return view;
