@@ -92,11 +92,11 @@
 #pragma mark Blur
 
 
-+(void)addBlurToView:(UIView *)view
++(UIView *)addBlurToView:(UIView *)view
 {
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
         
-//        view.backgroundColor = [UIColor clearColor];
+        view.backgroundColor = [UIColor clearColor];
         
         UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
@@ -104,7 +104,11 @@
         blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
         [view.superview insertSubview:blurEffectView aboveSubview:view];
+        
+        return blurEffectView;
     }
+    
+    return view;
 }
 
 +(UIImage *)addBlurToImage:(UIImage *)image
