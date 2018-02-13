@@ -36,7 +36,7 @@
 #pragma mark Blur
 
 
-+(UIView *)addBlurToView:(UIView *)view;
++(void)addBlurToView:(UIView *)view;
 +(UIImage *)addBlurToImage:(UIImage *)image;
 
 
