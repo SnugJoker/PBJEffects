@@ -104,7 +104,7 @@
         blurEffectView.frame = self.view.bounds;
         blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
-        [self.view insertSubview:blurEffectView aboveSubview:imageViewBackground];
+        [self.view insertSubview:blurEffectView aboveSubview:view];
     
     }else {
         
