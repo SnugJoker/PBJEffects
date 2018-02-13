@@ -94,27 +94,22 @@
 
 +(UIView *)addBlurToView:(UIView *)view
 {
-    //Get a UIImage from the UIView
-    UIGraphicsBeginImageContext(view.bounds.size);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *viewImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    if (!UIAccessibilityIsReduceTransparencyEnabled()) {
+        
+        imageViewBackground.backgroundColor = [UIColor clearColor];
+        
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        //always fill the view
+        blurEffectView.frame = self.view.bounds;
+        blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+        [self.view insertSubview:blurEffectView aboveSubview:imageViewBackground];
     
-    //Blur the UIImage with a CIFilter
-    CIImage *imageToBlur = [CIImage imageWithCGImage:viewImage.CGImage];
-    CIFilter *gaussianBlurFilter = [CIFilter filterWithName: @"CIGaussianBlur"];
-    [gaussianBlurFilter setValue:imageToBlur forKey: @"inputImage"];
-    [gaussianBlurFilter setValue:[NSNumber numberWithFloat: 10] forKey: @"inputRadius"];
-    CIImage *resultImage = [gaussianBlurFilter valueForKey: @"outputImage"];
-    UIImage *endImage = [[UIImage alloc] initWithCIImage:resultImage];
-    
-    //Place the UIImage in a UIImageView
-    UIImageView *newView = [[UIImageView alloc] initWithFrame:view.bounds];
-    newView.image = endImage;
-    //    [view.superview addSubview:newView];
-    [view.superview insertSubview:newView aboveSubview:view];
-    
-    return newView;
+    }else {
+        
+        return view;
+    }
 }
 
 +(UIImage *)addBlurToImage:(UIImage *)image
@@ -141,24 +136,6 @@
     
     //Returns the blured image.
     return bluredImage;
-    
-    //if you need scaling
-    //return [[self class] scaleIfNeeded:cgImage];
-}
-
-+(UIImage *)scaleIfNeeded:(CGImageRef)cgimg
-{
-    bool isRetina = [[[UIDevice currentDevice] systemVersion] intValue] >= 4 &&
-    [[UIScreen mainScreen] scale] == 2.0;
-    
-    if (isRetina) {
-        
-        return [UIImage imageWithCGImage:cgimg scale:2.0 orientation:UIImageOrientationUp];
-        
-    }else {
-        
-        return [UIImage imageWithCGImage:cgimg];
-    }
 }
 
 
