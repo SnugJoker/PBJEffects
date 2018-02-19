@@ -51,7 +51,7 @@ Then simply add one of the methods to your code:
 * Blur
        
 ```objectivec
-+(UIView *)addBlurToView:(UIView *)view;
++(UIView *)addBlurToView:(UIView *)view withStyle:(UIBlurEffectStyle)style;
 +(UIImage *)addBlurToImage:(UIImage *)image;
 ```
 
