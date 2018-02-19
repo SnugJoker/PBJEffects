@@ -12,9 +12,6 @@
 
 
 @interface PBJEffects : NSObject
-{
-    
-}
 
 
 #pragma mark - Static Methods
@@ -36,7 +33,7 @@
 #pragma mark Blur
 
 
-+(UIView *)addBlurToView:(UIView *)view;
++(UIView *)addBlurToView:(UIView *)view withStyle:(UIBlurEffectStyle)style;
 +(UIImage *)addBlurToImage:(UIImage *)image;
 
 
@@ -52,3 +49,4 @@
 
 
 @end
+

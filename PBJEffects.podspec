@@ -8,9 +8,9 @@
 
 Pod::Spec.new do |s|
 s.name             = 'PBJEffects'
-s.version          = '1.0.3'
+s.version          = '1.1.0'
 s.summary          = 'Effects framework.'
-s.description      = 'PBJEffects is a simple framework for adding eddects in no time.'
+s.description      = 'PBJEffects is a simple framework for adding effects to all kind of views in no time.'
 s.homepage         = 'https://github.com/SnugJoker/PBJEffects'
 s.license          = { :type => 'MIT', :file => 'LICENSE' }
 s.author           = { 'Joseph Razon' => 'razonjoe@gmail.com' }

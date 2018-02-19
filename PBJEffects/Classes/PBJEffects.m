@@ -11,9 +11,6 @@
 
 
 @implementation PBJEffects
-{
-    
-}
 
 
 #pragma mark - Private Methods
@@ -92,13 +89,13 @@
 #pragma mark Blur
 
 
-+(UIView *)addBlurToView:(UIView *)view
++(UIView *)addBlurToView:(UIView *)view withStyle:(UIBlurEffectStyle)style
 {
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
         
         view.backgroundColor = [UIColor clearColor];
         
-        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:style];
         UIVisualEffectView *blurEffectView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
         blurEffectView.frame = view.bounds;
         blurEffectView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -143,7 +140,7 @@
 
 +(UIImage *)convertImageToMonoEffect:(UIImage *)image
 {
- 
+    
     return [self image:image withCIFilter:@"CIPhotoEffectMono"];
 }
 
