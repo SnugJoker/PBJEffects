@@ -18,7 +18,7 @@
 #pragma mark Shadow
 
 
-+(UIView *)addBlurToView:(UIView *)view withStyle:(UIBlurEffectStyle)style;
++(void)addShadowToView:(UIView *)view;
 +(void)addShadowToView:(UIView *)view onSuperView:(UIView *)superView;
 +(UIView *)addShadowView:(UIView *)viewShadow toView:(UIView *)view onSuperView:(UIView *)superView;
 
