@@ -12,16 +12,13 @@
 
 
 @interface PBJEffects : NSObject
-{
-    
-}
 
 
 #pragma mark - Static Methods
 #pragma mark Shadow
 
 
-+(void)addShadowToView:(UIView *)view;
++(UIView *)addBlurToView:(UIView *)view withStyle:(UIBlurEffectStyle)style;
 +(void)addShadowToView:(UIView *)view onSuperView:(UIView *)superView;
 +(UIView *)addShadowView:(UIView *)viewShadow toView:(UIView *)view onSuperView:(UIView *)superView;
 
@@ -52,3 +49,4 @@
 
 
 @end
+
