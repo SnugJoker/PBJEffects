@@ -36,6 +36,11 @@ Then simply add one of the methods to your code:
 * Shadow
    
 ```objectivec
++(void)addShadowToView:(UIView *)view withShadowType:(ShadowType)shadowType;
++(void)addMoreGentleShadowToView:(UIView *)view;
++(void)addTrapezoidalShadowToView:(UIView *)view;
++(void)addEllipticalBottomShadowToView:(UIView *)view;
++(void)addShadowTypeCurlBottomShadowToView:(UIView *)view;
 +(void)addShadowToView:(UIView *)view;
 +(void)addShadowToView:(UIView *)view onSuperView:(UIView *)superView;
 +(UIView *)addShadowView:(UIView *)viewShadow toView:(UIView *)view onSuperView:(UIView *)superView;
@@ -67,6 +72,7 @@ Then simply add one of the methods to your code:
 
 ## Author
 Joseph Razon, razonjoe@gmail.com
+(Also few parts were inspired by Michael Nachbaur https://github.com/NachoMan)
 
 ## License
 PBJEffects is available under the MIT license. See the LICENSE file for more info.
