@@ -72,6 +72,7 @@ Then simply add one of the methods to your code:
 
 ## Author
 Joseph Razon, razonjoe@gmail.com
+
 (Also few parts were inspired by Michael Nachbaur https://github.com/NachoMan)
 
 ## License
