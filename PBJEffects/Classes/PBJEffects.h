@@ -8,16 +8,35 @@
 
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import <CoreImage/CoreImage.h>
 
 
 @interface PBJEffects : NSObject
 
 
+#pragma mark - Enums
+
+
+typedef NS_ENUM (NSInteger, ShadowType) {
+    
+    ShadowTypeMoreGentle,
+    ShadowTypeLessGentle,
+    ShadowTypeTrapezoidal,
+    ShadowTypeEllipticalBottom,
+    ShadowTypeCurlBottom,
+};
+
+
 #pragma mark - Static Methods
 #pragma mark Shadow
 
 
++(void)addShadowToView:(UIView *)view withShadowType:(ShadowType)shadowType;
++(void)addMoreGentleShadowToView:(UIView *)view;
++(void)addTrapezoidalShadowToView:(UIView *)view;
++(void)addEllipticalBottomShadowToView:(UIView *)view;
++(void)addShadowTypeCurlBottomShadowToView:(UIView *)view;
 +(void)addShadowToView:(UIView *)view;
 +(void)addShadowToView:(UIView *)view onSuperView:(UIView *)superView;
 +(UIView *)addShadowView:(UIView *)viewShadow toView:(UIView *)view onSuperView:(UIView *)superView;

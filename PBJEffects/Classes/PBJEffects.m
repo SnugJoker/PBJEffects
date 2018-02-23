@@ -27,13 +27,116 @@
 #pragma mark Shadow
 
 
++(void)addShadowToView:(UIView *)view withShadowType:(ShadowType)shadowType
+{
+    switch (shadowType) {
+        
+        case ShadowTypeMoreGentle:
+        {
+            [self addShadowToView:view];
+        }
+            break;
+            
+        case ShadowTypeLessGentle:
+        {
+            [self addMoreGentleShadowToView:view];
+        }
+            break;
+            
+        case ShadowTypeTrapezoidal:
+        {
+            [self addTrapezoidalShadowToView:view];
+        }
+            break;
+            
+        case ShadowTypeEllipticalBottom:
+        {
+            [self addEllipticalBottomShadowToView:view];
+        }
+            break;
+            
+        case ShadowTypeCurlBottom:
+        {
+            [self addShadowTypeCurlBottomShadowToView:view];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
++(void)addMoreGentleShadowToView:(UIView *)view
+{
+    view.layer.shadowColor = [UIColor blackColor].CGColor;
+    view.layer.shadowOpacity = 0.7f;
+    view.layer.shadowOffset = CGSizeMake(10.0f, 10.0f);
+    view.layer.shadowRadius = 5.0f;
+    view.layer.masksToBounds = NO;
+    
+    UIBezierPath *path = [UIBezierPath bezierPathWithRect:view.bounds];
+    view.layer.shadowPath = path.CGPath;
+}
+
++(void)addTrapezoidalShadowToView:(UIView *)view
+{
+    view.layer.shadowColor = [UIColor blackColor].CGColor;
+    view.layer.shadowOpacity = 0.7f;
+    view.layer.shadowOffset = CGSizeMake(10.0f, 10.0f);
+    view.layer.shadowRadius = 5.0f;
+    view.layer.masksToBounds = NO;
+    
+    CGSize size = view.bounds.size;
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(size.width * 0.33f, size.height * 0.66f)];
+    [path addLineToPoint:CGPointMake(size.width * 0.66f, size.height * 0.66f)];
+    [path addLineToPoint:CGPointMake(size.width * 1.15f, size.height * 1.15f)];
+    [path addLineToPoint:CGPointMake(size.width * -0.15f, size.height * 1.15f)];
+    view.layer.shadowPath = path.CGPath;
+}
+
++(void)addEllipticalBottomShadowToView:(UIView *)view
+{
+    view.layer.shadowColor = [UIColor blackColor].CGColor;
+    view.layer.shadowOpacity = 0.7f;
+    view.layer.shadowOffset = CGSizeMake(10.0f, 10.0f);
+    view.layer.shadowRadius = 5.0f;
+    view.layer.masksToBounds = NO;
+    
+    CGSize size = view.bounds.size;
+    CGRect ovalRect = CGRectMake(0.0f, size.height + 5, size.width - 10, 15);
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:ovalRect];
+    view.layer.shadowPath = path.CGPath;
+}
+
++(void)addShadowTypeCurlBottomShadowToView:(UIView *)view
+{
+    view.layer.shadowColor = [UIColor blackColor].CGColor;
+    view.layer.shadowOpacity = 0.7f;
+    view.layer.shadowOffset = CGSizeMake(10.0f, 10.0f);
+    view.layer.shadowRadius = 5.0f;
+    view.layer.masksToBounds = NO;
+    
+    CGSize size = view.bounds.size;
+    CGFloat curlFactor = 15.0f;
+    CGFloat shadowDepth = 5.0f;
+    
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    [path moveToPoint:CGPointMake(0.0f, 0.0f)];
+    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
+    [path addLineToPoint:CGPointMake(size.width, size.height + shadowDepth)];
+    [path addCurveToPoint:CGPointMake(0.0f, size.height + shadowDepth)
+            controlPoint1:CGPointMake(size.width - curlFactor, size.height + shadowDepth - curlFactor)
+            controlPoint2:CGPointMake(curlFactor, size.height + shadowDepth - curlFactor)];
+}
+
 +(void)addShadowToView:(UIView *)view
 {
     [view.layer setMasksToBounds:NO];
     [view.layer setShadowColor:[UIColor blackColor].CGColor];
     [view.layer setShadowOffset:CGSizeMake(0, 1.5)];
     [view.layer setShadowRadius:4.50];
-    [view.layer setShadowOpacity:0.50];
+    [view.layer setShadowOpacity:0.650];
 }
 
 +(void)addShadowToView:(UIView *)view onSuperView:(UIView *)superView
@@ -44,7 +147,7 @@
     [viewShadow.layer setShadowColor:[UIColor blackColor].CGColor];
     [viewShadow.layer setShadowOffset:CGSizeMake(0, 1.5)];
     [viewShadow.layer setShadowRadius:4.50];
-    [viewShadow.layer setShadowOpacity:0.50];
+    [viewShadow.layer setShadowOpacity:0.650];
     
     [superView insertSubview:viewShadow belowSubview:view];
 }
@@ -225,6 +328,10 @@
     
     return colorizedImage;
 }
+
+
+#pragma mark - Static (hidden) Methods
+
 
 
 
