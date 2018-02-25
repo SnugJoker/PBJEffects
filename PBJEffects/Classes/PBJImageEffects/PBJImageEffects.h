@@ -19,8 +19,6 @@
 #pragma mark Image Effects
 
 
-//"Master Functions"
-+(UIImage *)image:(UIImage *)image withCIFilter:(NSString *)filterName;
 //"Sub Functions"
 +(UIImage *)convertImageToCIColorCrossPolynomial:(UIImage *)image;
 +(UIImage *)convertImageToCIColorCube:(UIImage *)image;
@@ -44,8 +42,7 @@
 +(UIImage *)convertImageToCISepiaTone:(UIImage *)image;
 +(UIImage *)convertImageToCIVignette:(UIImage *)image;
 +(UIImage *)convertImageToCIVignetteEffect:(UIImage *)image;
-
-//
+//Other
 +(UIImage *)convertImageToGrayScale:(UIImage *)image;
 +(UIImage *)colorizeImage:(UIImage *)image withColor:(UIColor *)color;
 

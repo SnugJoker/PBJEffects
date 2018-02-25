@@ -37,13 +37,6 @@ typedef NS_ENUM (NSInteger, ShadowType) {
 +(UIView *)addShadowView:(UIView *)viewShadow toView:(UIView *)view onSuperView:(UIView *)superView;
 
 
-#pragma mark Fade
-
-
-+(void)fadeInView:(UIView *)view;
-+(void)fadeOutView:(UIView *)view;
-
-
 #pragma mark Blur
 
 

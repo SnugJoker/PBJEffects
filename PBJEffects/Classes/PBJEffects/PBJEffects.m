@@ -98,26 +98,6 @@
 }
 
 
-#pragma mark Fade
-
-
-+(void)fadeInView:(UIView *)view
-{
-    [UIView animateWithDuration:0.333 animations:^(){
-        
-        [view setAlpha:1.0];
-    }];
-}
-
-+(void)fadeOutView:(UIView *)view
-{
-    [UIView animateWithDuration:0.333 animations:^(){
-        
-        [view setAlpha:0];
-    }];
-}
-
-
 #pragma mark Blur
 
 
