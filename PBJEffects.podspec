@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'PBJEffects'
-s.version          = '1.2.1'
+s.version          = '1.3.0'
 s.summary          = 'Effects framework.'
 s.description      = 'PBJEffects is a simple framework for adding effects to all kind of views in no time.'
 s.homepage         = 'https://github.com/SnugJoker/PBJEffects'
@@ -18,8 +18,8 @@ s.source           = { :git => 'https://github.com/SnugJoker/PBJEffects.git', :t
 
 s.ios.deployment_target = '8.0'
 
-s.source_files = 'PBJEffects/Classes/*'
-s.public_header_files = 'PBJEffects/Classes/*.h'
+s.source_files = 'PBJEffects/Classes/**/*'
+s.public_header_files = 'PBJEffects/Classes/**/*.h'
 
 
 end

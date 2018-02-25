@@ -51,16 +51,5 @@ typedef NS_ENUM (NSInteger, ShadowType) {
 +(UIImage *)addBlurToImage:(UIImage *)image;
 
 
-#pragma mark Image Filters
-
-
-+(UIImage *)convertImageToMonoEffect:(UIImage *)image;
-+(UIImage *)convertImageToNoirEffect:(UIImage *)image;
-+(UIImage *)image:(UIImage *)image withCIFilter:(NSString *)filterName;
-+(UIImage *)convertImageToGrayScale:(UIImage *)image;
-+(UIImage *)colorizeImage:(UIImage *)image withColor:(UIColor *)color;
-
-
 
 @end
-
