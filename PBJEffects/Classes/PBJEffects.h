@@ -33,11 +33,6 @@ typedef NS_ENUM (NSInteger, ShadowType) {
 
 
 +(void)addShadowToView:(UIView *)view withShadowType:(ShadowType)shadowType;
-+(void)addMoreGentleShadowToView:(UIView *)view;
-+(void)addTrapezoidalShadowToView:(UIView *)view;
-+(void)addEllipticalBottomShadowToView:(UIView *)view;
-+(void)addShadowTypeCurlBottomShadowToView:(UIView *)view;
-+(void)addShadowToView:(UIView *)view;
 +(void)addShadowToView:(UIView *)view onSuperView:(UIView *)superView;
 +(UIView *)addShadowView:(UIView *)viewShadow toView:(UIView *)view onSuperView:(UIView *)superView;
 
