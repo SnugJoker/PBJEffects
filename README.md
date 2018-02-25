@@ -37,22 +37,10 @@ Then simply add one of the methods to your code:
    
 ```objectivec
 +(void)addShadowToView:(UIView *)view withShadowType:(ShadowType)shadowType;
-+(void)addMoreGentleShadowToView:(UIView *)view;
-+(void)addTrapezoidalShadowToView:(UIView *)view;
-+(void)addEllipticalBottomShadowToView:(UIView *)view;
-+(void)addShadowTypeCurlBottomShadowToView:(UIView *)view;
-+(void)addShadowToView:(UIView *)view;
 +(void)addShadowToView:(UIView *)view onSuperView:(UIView *)superView;
 +(UIView *)addShadowView:(UIView *)viewShadow toView:(UIView *)view onSuperView:(UIView *)superView;
 ```
 
-* Fade
-    
-```objectivec
-+(void)fadeInView:(UIView *)view;
-+(void)fadeOutView:(UIView *)view;
-```
-    
 * Blur
        
 ```objectivec
@@ -63,9 +51,30 @@ Then simply add one of the methods to your code:
 * Image Filters
        
 ```objectivec
-+(UIImage *)convertImageToMonoEffect:(UIImage *)image;
-+(UIImage *)convertImageToNoirEffect:(UIImage *)image;
-+(UIImage *)image:(UIImage *)image withCIFilter:(NSString *)filterName;
+//"Sub Functions"
++(UIImage *)convertImageToCIColorCrossPolynomial:(UIImage *)image;
++(UIImage *)convertImageToCIColorCube:(UIImage *)image;
++(UIImage *)convertImageToCIColorCubeWithColorSpace:(UIImage *)image;
++(UIImage *)convertImageToCIColorInvert:(UIImage *)image;
++(UIImage *)convertImageToCIColorMap:(UIImage *)image;
++(UIImage *)convertImageToCIColorMonochrome:(UIImage *)image;
++(UIImage *)convertImageToCIColorPosterize:(UIImage *)image;
++(UIImage *)convertImageToCIFalseColor:(UIImage *)image;
++(UIImage *)convertImageToCIMaskToAlpha:(UIImage *)image;
++(UIImage *)convertImageToCIMaximumComponent:(UIImage *)image;
++(UIImage *)convertImageToCIMinimumComponent:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectChrome:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectFade:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectInstant:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectMono:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectNoir:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectProcess:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectTonal:(UIImage *)image;
++(UIImage *)convertImageToCIPhotoEffectTransfer:(UIImage *)image;
++(UIImage *)convertImageToCISepiaTone:(UIImage *)image;
++(UIImage *)convertImageToCIVignette:(UIImage *)image;
++(UIImage *)convertImageToCIVignetteEffect:(UIImage *)image;
+//Other
 +(UIImage *)convertImageToGrayScale:(UIImage *)image;
 +(UIImage *)colorizeImage:(UIImage *)image withColor:(UIColor *)color;
 ```
