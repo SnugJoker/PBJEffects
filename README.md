@@ -5,6 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/PBJEffects.svg?style=flat)](http://cocoapods.org/pods/PBJEffects)
 [![Platform](https://img.shields.io/cocoapods/p/PBJEffects.svg?style=flat)](http://cocoapods.org/pods/PBJEffects)
 [![BCH compliance](https://bettercodehub.com/edge/badge/SnugJoker/PBJEffects?branch=master)](https://bettercodehub.com/)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JoeRazon)
 
 ## Description
 PBJEffects is a nice collection of cool effects.
