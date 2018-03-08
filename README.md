@@ -27,7 +27,7 @@ pod 'PBJEffects'
 ```
 
 ## How To Use
-To use PBJAnimations first import the class:
+To use PBJEffects first import the class:
 
 ```objectivec
 #import "PBJEffects.h"
