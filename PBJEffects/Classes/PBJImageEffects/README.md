@@ -3,9 +3,6 @@
 ## Description
 PBJImageFilters is a collection of UIImage effects.
 
-## Example
-![Screenshot](Screenies/screenshot.png)
-
 ## Requirements
 No requirements needed.
 
