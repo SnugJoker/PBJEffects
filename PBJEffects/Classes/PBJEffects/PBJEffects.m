@@ -9,7 +9,7 @@
 
 #import "PBJEffects.h"
 
-#import "PBJImageEffects.h"
+#import "PBJImageFilters.h"
 
 
 @implementation PBJEffects

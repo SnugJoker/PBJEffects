@@ -1,5 +1,5 @@
 //
-//  PBJEffects.m
+//  PBJImageFilters.m
 //  Joseph Razon (razonjoe@gmail.com)
 //
 //  Created by Joseph Razon (razonjoe@gmail.com) on 7/6/15.
@@ -7,10 +7,10 @@
 //
 
 
-#import "PBJImageEffects.h"
+#import "PBJImageFilters.h"
 
 
-@implementation PBJImageEffects
+@implementation PBJImageFilters
 
 
 #pragma mark - Private Methods

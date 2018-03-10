@@ -1,5 +1,5 @@
 //
-//  PBJImageEffects.h
+//  PBJImageFilters.h
 //  Joseph Razon (razonjoe@gmail.com)
 //
 //  Created by Joseph Razon (razonjoe@gmail.com) on 7/6/15.
@@ -14,7 +14,7 @@
 #import "PBJEffectsBaseClass.h"
 
 
-@interface PBJImageEffects : PBJEffectsBaseClass
+@interface PBJImageFilters : PBJEffectsBaseClass
 
 
 #pragma mark - Static Methods
