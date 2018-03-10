@@ -1,7 +1,7 @@
 # PBJImageFilters
 
 ## Description
-PBJImageFilters is a nice collection of cool effects.
+PBJImageFilters is a collection of UIImage effects.
 
 ## Example
 ![Screenshot](Screenies/screenshot.png)
