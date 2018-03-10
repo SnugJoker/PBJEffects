@@ -11,8 +11,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreImage/CoreImage.h>
 
+#import "PBJEffectsBaseClass.h"
 
-@interface PBJEffects : NSObject
+
+@interface PBJEffects : PBJEffectsBaseClass
 
 
 #pragma mark - Enums

@@ -32,133 +32,133 @@
 +(UIImage *)convertImageToCIColorCrossPolynomial:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIColorCrossPolynomial"];
+    return [self image:image withCIFilter:CIFILTER_CICOLORCROSSPOLYNOMIAL];
 }
 
 +(UIImage *)convertImageToCIColorCube:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIColorCube"];
+    return [self image:image withCIFilter:CIFILTER_CICOLORCUBE];
 }
 
 +(UIImage *)convertImageToCIColorCubeWithColorSpace:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIColorCubeWithColorSpace"];
+    return [self image:image withCIFilter:CIFILTER_CICOLORCUBEWITHCOLORSPACE];
 }
 
 +(UIImage *)convertImageToCIColorInvert:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIColorInvert"];
+    return [self image:image withCIFilter:CIFILTER_CICOLORINVERT];
 }
 
 +(UIImage *)convertImageToCIColorMap:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIColorMap"];
+    return [self image:image withCIFilter:CIFILTER_CICOLORMAP];
 }
 
 +(UIImage *)convertImageToCIColorMonochrome:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIColorMonochrome"];
+    return [self image:image withCIFilter:CIFILTER_CICOLORMONOCHROME];
 }
 
 +(UIImage *)convertImageToCIColorPosterize:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIColorPosterize"];
+    return [self image:image withCIFilter:CIFILTER_CICOLORPOSTERIZE];
 }
 
 +(UIImage *)convertImageToCIFalseColor:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIFalseColor"];
+    return [self image:image withCIFilter:CIFILTER_CIFALSECOLOR];
 }
 
 +(UIImage *)convertImageToCIMaskToAlpha:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIMaskToAlpha"];
+    return [self image:image withCIFilter:CIFILTER_CIMASKTOALPHA];
 }
 
 +(UIImage *)convertImageToCIMaximumComponent:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIMaximumComponent"];
+    return [self image:image withCIFilter:CIFILTER_CIMAXIMUMCOMPONENT];
 }
 
 +(UIImage *)convertImageToCIMinimumComponent:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIMinimumComponent"];
+    return [self image:image withCIFilter:CIFILTER_CIMINIMUMCOMPONENT];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectChrome:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectChrome"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTCHROME];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectFade:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectFade"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTFADE];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectInstant:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectInstant"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTINSTANT];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectMono:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectMono"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTMONO];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectNoir:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectNoir"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTNOIR];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectProcess:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectProcess"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTPROCESS];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectTonal:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectTonal"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTTONAL];
 }
 
 +(UIImage *)convertImageToCIPhotoEffectTransfer:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIPhotoEffectTransfer"];
+    return [self image:image withCIFilter:CIFILTER_CIPHOTOEFFECTTRANSFER];
 }
 
 +(UIImage *)convertImageToCISepiaTone:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CISepiaTone"];
+    return [self image:image withCIFilter:CIFILTER_CISEPIATONE];
 }
 
 +(UIImage *)convertImageToCIVignette:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIVignette"];
+    return [self image:image withCIFilter:CIFILTER_CIVIGNETTE];
 }
 
 +(UIImage *)convertImageToCIVignetteEffect:(UIImage *)image
 {
     
-    return [self image:image withCIFilter:@"CIVignetteEffect"];
+    return [self image:image withCIFilter:CIFILTER_CIVIGNETTEEFFECT];
 }
 
 //
@@ -219,28 +219,6 @@
     UIGraphicsEndImageContext();
     
     return colorizedImage;
-}
-
-
-#pragma mark - Hidden Methods
-
-
-//"Master Functions"
-+(UIImage *)image:(UIImage *)image withCIFilter:(NSString *)filterName
-{
-    CIImage *unfiltered = [CIImage imageWithCGImage:image.CGImage];
-    CIFilter *filter = [CIFilter filterWithName:filterName];
-    [filter setValue:unfiltered forKey:kCIInputImageKey];
-    CIImage *filtered = [filter outputImage];
-    CIContext *context = [CIContext contextWithOptions:nil];
-    CGImageRef cgimage = [context createCGImage:filtered fromRect:CGRectMake(0, 0, image.size.width*image.scale, image.size.height*image.scale)];
-    
-    // Do not use initWithCIImage because that renders the filter each time the image is displayed.  This causes slow scrolling in tableviews.
-    UIImage *imageToReturn = [[UIImage alloc] initWithCGImage:cgimage scale:image.scale orientation:image.imageOrientation];
-    CGImageRelease(cgimage);
-    
-    
-    return imageToReturn;
 }
 
 

@@ -11,8 +11,10 @@
 #import <UIKit/UIKit.h>
 #import <CoreImage/CoreImage.h>
 
+#import "PBJEffectsBaseClass.h"
 
-@interface PBJImageEffects : NSObject
+
+@interface PBJImageEffects : PBJEffectsBaseClass
 
 
 #pragma mark - Static Methods
