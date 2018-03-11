@@ -13,6 +13,8 @@
 #define INPUTLEVELS @"inputLevels"
 
 
+#define kCICategoryColorEffects @[@"CIColorCrossPolynomial", @"CIColorCube", @"CIColorCubeWithColorSpace", @"CIColorInvert", @"CIColorMap", @"CIColorMonochrome", @"CIColorPosterize", @"CIFalseColor", @"CIMaskToAlpha", @"CIMaximumComponent", @"CIMinimumComponent", @"CIPhotoEffectChrome", @"CIPhotoEffectFade", @"CIPhotoEffectInstant", @"CIPhotoEffectMono", @"CIPhotoEffectNoir", @"CIPhotoEffectProcess", @"CIPhotoEffectTonal", @"CIPhotoEffectTransfer", @"CISepiaTone", @"CIVignette", @"CIVignetteEffect"]
+
 #define kCICategoryColorEffect(enum) [@[@"CIColorCrossPolynomial", @"CIColorCube", @"CIColorCubeWithColorSpace", @"CIColorInvert", @"CIColorMap", @"CIColorMonochrome", @"CIColorPosterize", @"CIFalseColor", @"CIMaskToAlpha", @"CIMaximumComponent", @"CIMinimumComponent", @"CIPhotoEffectChrome", @"CIPhotoEffectFade", @"CIPhotoEffectInstant", @"CIPhotoEffectMono", @"CIPhotoEffectNoir", @"CIPhotoEffectProcess", @"CIPhotoEffectTonal", @"CIPhotoEffectTransfer", @"CISepiaTone", @"CIVignette", @"CIVignetteEffect"] objectAtIndex:enum]
 
 
