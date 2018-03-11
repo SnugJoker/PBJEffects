@@ -21,9 +21,7 @@
 {
     CIImage *unfiltered = [CIImage imageWithCGImage:image.CGImage];
     
-    NSArray *filtersArray = @[@"CIColorCrossPolynomial", @"CIColorCube", @"CIColorCubeWithColorSpace", @"CIColorInvert", @"CIColorMap", @"CIColorMonochrome", @"CIColorPosterize", @"CIFalseColor", @"CIMaskToAlpha", @"CIMaximumComponent", @"CIMinimumComponent", @"CIPhotoEffectChrome", @"CIPhotoEffectFade", @"CIPhotoEffectInstant", @"CIPhotoEffectMono", @"CIPhotoEffectNoir", @"CIPhotoEffectProcess", @"CIPhotoEffectTonal", @"CIPhotoEffectTransfer", @"CISepiaTone", @"CIVignette", @"CIVignetteEffect"];
-    
-    CIFilter *filter = [CIFilter filterWithName:[filtersArray objectAtIndex:categoryColorEffect]];
+    CIFilter *filter = [CIFilter filterWithName:[kCICategoryColorEffects objectAtIndex:categoryColorEffect]];
     [filter setValue:unfiltered forKey:kCIInputImageKey];
     
     CIImage *filtered = [filter outputImage];
