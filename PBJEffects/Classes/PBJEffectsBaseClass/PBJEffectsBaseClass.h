@@ -21,9 +21,9 @@
 #pragma mark UIImage Filters
 
 
-//"Master Functions"
-+(UIImage *)image:(UIImage *)image withCIFilter:(NSString *)filterName;
-
+//Master Functions
++(UIImage *)image:(UIImage *)image withCICategoryColorEffect:(CICategoryColorEffect)categoryColorEffect;
++(UIImage *)image:(UIImage *)image withCICategoryBlur:(NSString *)filterName andWithInputLevels:(float)inputLevels;
 
 
 

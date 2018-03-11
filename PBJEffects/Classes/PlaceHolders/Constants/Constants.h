@@ -8,7 +8,7 @@
 #ifndef Constants_h
 #define Constants_h
 
-#define ASDMSDM @"asdsadasdsa"
+#define INPUTLEVELS @"inputLevels"
 
 
 #define CIFILTER_CICOLORCROSSPOLYNOMIAL @"CIColorCrossPolynomial"
@@ -36,3 +36,4 @@
 
 
 #endif /* Constants_h */
+
