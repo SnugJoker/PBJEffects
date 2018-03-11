@@ -25,6 +25,7 @@ Then simply add thie maser function to your code:
 
 ### Implementation
 image (UIImage *): The UIImage object for aplying the filter.
+
 categoryColorEffect (CategoryColorEffect): One of the image filter enum:
 
 + **CategoryColorEffect_CIColorCrossPolynomial**
