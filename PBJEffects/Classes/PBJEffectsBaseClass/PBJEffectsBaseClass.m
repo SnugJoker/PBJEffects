@@ -17,11 +17,12 @@
 
 
 //"Master Functions"
-+(UIImage *)image:(UIImage *)image withCICategoryColorEffect:(CICategoryColorEffect)categoryColorEffect
++(UIImage *)image:(UIImage *)image withCategoryColorEffect:(CategoryColorEffect)categoryColorEffect
 {
     CIImage *unfiltered = [CIImage imageWithCGImage:image.CGImage];
     
-    CIFilter *filter = [CIFilter filterWithName:kCICategoryColorEffect(categoryColorEffect)];
+    NSString *filterName = kCICategoryColorEffect(categoryColorEffect);
+    CIFilter *filter = [CIFilter filterWithName:filterName];
     [filter setValue:unfiltered forKey:kCIInputImageKey];
     
     CIImage *filtered = [filter outputImage];

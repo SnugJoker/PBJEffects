@@ -7,8 +7,11 @@
 
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreImage/CoreImage.h>
 
 #import "Constants.h"
+#import "Enums.h"
 
 
 @interface PBJEffectsBaseClass : NSObject
@@ -22,7 +25,7 @@
 
 
 //Master Functions
-+(UIImage *)image:(UIImage *)image withCICategoryColorEffect:(CICategoryColorEffect)categoryColorEffect;
++(UIImage *)image:(UIImage *)image withCategoryColorEffect:(CategoryColorEffect)categoryColorEffect;
 +(UIImage *)image:(UIImage *)image withCICategoryBlur:(NSString *)filterName andWithInputLevels:(float)inputLevels;
 
 

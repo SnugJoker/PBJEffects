@@ -7,27 +7,10 @@
 //
 
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import <CoreImage/CoreImage.h>
-
 #import "PBJEffectsBaseClass.h"
 
 
 @interface PBJEffects : PBJEffectsBaseClass
-
-
-#pragma mark - Enums
-
-
-typedef NS_ENUM (NSInteger, ShadowType) {
-    
-    ShadowTypeMoreGentle,
-    ShadowTypeLessGentle,
-    ShadowTypeTrapezoidal,
-    ShadowTypeEllipticalBottom,
-    ShadowTypeCurlBottom,
-};
 
 
 #pragma mark - Static Methods
