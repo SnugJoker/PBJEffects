@@ -21,7 +21,7 @@
 {
     CIImage *unfiltered = [CIImage imageWithCGImage:image.CGImage];
     
-    CIFilter *filter = [CIFilter filterWithName:[kCICategoryColorEffects objectAtIndex:categoryColorEffect]];
+    CIFilter *filter = [CIFilter filterWithName:kCICategoryColorEffect(categoryColorEffect)];
     [filter setValue:unfiltered forKey:kCIInputImageKey];
     
     CIImage *filtered = [filter outputImage];
