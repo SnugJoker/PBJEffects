@@ -1,7 +1,7 @@
 # PBJImageFilters
 
 ## Description
-PBJImageFilters is a collection of UIImage effects.
+PBJImageFilters is a collection of UIImage filters.
 
 ## Requirements
 No requirements needed.
@@ -14,7 +14,7 @@ To use PBJImageFilters first import the class:
 #import <PBJEffects/PBJImageFilters.h>
 ```
 
-Then simply add thie maser function to your code:
+Then simply add the master function to your code:
 
 #### Objective C ####       
        
