@@ -53,7 +53,7 @@ Then simply add one of the methods to your code:
 
 * Image Filters
 
- for image filters please refer to [PBJImageFilters .README file.](https://github.com/SnugJoker/PBJEffects/tree/1.4.0/PBJEffects/Classes/PBJImageEffects)
+ for image filters please refer to [PBJImageFilters .README file.](https://github.com/SnugJoker/PBJEffects/blob/master/PBJEffects/Classes/PBJImageFilters/README.md)
 .
 
 
